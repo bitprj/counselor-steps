@@ -197,7 +197,9 @@ var file = new Server("./pages");
 
 require("http")
   .createServer(createNodeMiddleware(app, { onUnhandledRequest: file.serve.bind(file) }))
-  .listen(3000);
+  .listen(process.env.PORT || 3000, function () {
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
 
 
 // can now receive user authorization callbacks at /api/github/oauth/callback
