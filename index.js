@@ -192,7 +192,7 @@ async function updateHasura(repo, owner, step) {
     headers: {
       repo,
       owner,
-      step: step + 1
+      step: step
     }
   }
 
