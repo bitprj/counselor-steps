@@ -24,7 +24,7 @@ app.on("token", async ({ token, octokit }) => {
 
   const { owner, repo, step } = await queryHasura(user)
 
-
+  console.log("THE STEP IS: " + step)
 
   console.log(token);
   console.log(`Token retrieved for ${data.login}`);

@@ -8,6 +8,8 @@ async function sendData(event) {
     let repo = document.getElementById('repo').value;
     let step = document.getElementById('step').value;
 
+    console.log(step);
+
     let options = {
         method: "POST",
         headers: {
