@@ -51,6 +51,14 @@ app.on("token", async ({ token, octokit }) => {
   for (var i = 0; i < issues.data.length; i++) {
     const issueNo = issues.data[i].number;
     console.log(issueNo)
+
+    await octokit.request('POST /repos/{owner}/{repo}/issues/{issue_number}/comments', {
+      owner,
+      repo,
+      issue_number: issueNo,
+      body: 'closed via oauth'
+    })
+
     await octokit.request('PATCH /repos/{owner}/{repo}/issues/{issue_number}', {
       owner,
       repo,
@@ -184,7 +192,7 @@ async function updateHasura(repo, owner, step) {
     headers: {
       repo,
       owner,
-      step
+      step: step + 1
     }
   }
 
