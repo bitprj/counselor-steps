@@ -16,6 +16,11 @@ a {
     font-size: 3rem !important;
 }
 
+i {
+    color: #fac900;
+    font-weight: bold;
+}
+
 .muted {
     color: grey;
 }
@@ -48,7 +53,6 @@ a {
 }
 
 .form-content .form-items {
-    border: 3px solid #fff;
     padding: 40px;
     display: inline-block;
     -webkit-border-radius: 10px;
@@ -156,4 +160,13 @@ a {
 .hidden {
     display: none !important;
     border: 2px solid green !important;
+}
+
+.logo {
+    max-height: 300px;
+}
+
+.wheat {
+    color: #fac900;
+    font-weight: bold;
 }
