@@ -16,7 +16,7 @@ const app = new OAuthApp({
 
 
 // deploy
-app.on("token", async ({ token, octokit }) => {
+app.on("token.created", async ({ token, octokit }) => {
   // send index.html 
   const { data } = await octokit.request("GET /user");
 
