@@ -167,6 +167,10 @@ i {
 }
 
 .wheat {
-    color: #fac900;
+    color: #fac900 !important;
     font-weight: bold;
+}
+
+.m-margin {
+    margin-top: -8rem;
 }
