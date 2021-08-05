@@ -152,3 +152,8 @@ a {
 .valid-feedback{
    color: #2acc80;
 }
+
+.hidden {
+    display: none !important;
+    border: 2px solid green !important;
+}
