@@ -4,8 +4,8 @@ const { OAuthApp, createNodeMiddleware } = require("@octokit/oauth-app");
 var { Server } = require("node-static");
 
 
-const { createAppAuth } = require("@octokit/auth-app");
-const { Octokit, App, Action } = require("octokit");
+// const { createAppAuth } = require("@octokit/auth-app");
+// const { Octokit, App, Action } = require("octokit");
 
 const app = new OAuthApp({
   clientType: "oauth-app",
@@ -18,6 +18,8 @@ const app = new OAuthApp({
 // deploy
 app.on("token.created", async ({ token, octokit }) => {
   // send index.html 
+
+  console.log(token);
   const { data } = await octokit.request("GET /user");
 
   const user = data.login;
@@ -29,13 +31,6 @@ app.on("token.created", async ({ token, octokit }) => {
   console.log(token);
   console.log(`Token retrieved for ${data.login}`);
 
-
-  // once the user gets authenticated redirect to a form page
-
-  // need to find a way to get user input for owner, repo, and step
-  // let owner = "ganning127"
-  // let repo = "test67"
-  // let step = 4;
 
   const configyml = await yamlFile(repo, owner, octokit); // get config yaml file
   // console.log(configyml)
