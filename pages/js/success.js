@@ -19,5 +19,7 @@ window.onload = async () => {
         }
     }
     let resp = await fetch(endpoint, options);
-    console.log(resp);
+    let data = await resp.json();
+
+    console.log(data)
 }
