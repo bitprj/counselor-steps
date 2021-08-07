@@ -9,12 +9,12 @@ window.onload = async () => {
 
     console.log(code);
 
-    const endpoint = "";
+    const endpoint = "https://hasuraprogressupdate.azurewebsites.net/api/octokitActions?code=yNZKwqGeRcuvFCUIm4MaS0u/doKx0z0y/gwYyQXbM5x3OSUGVysaOw==";
     const options = {
         headers: {
             code: code
         }
     }
-    let resp = await fetch(endpoint, code);
+    let resp = await fetch(endpoint, options);
     console.log(resp);
 }
