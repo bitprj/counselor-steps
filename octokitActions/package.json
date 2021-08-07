@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@octokit/oauth-app": "^3.5.1"
+    "@octokit/oauth-app": "^3.5.1",
+    "js-yaml": "^4.1.0",
+    "node-fetch": "^2.6.1"
   }
 }
