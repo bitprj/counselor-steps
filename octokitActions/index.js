@@ -41,14 +41,6 @@ module.exports = async function (context, req) {
         repo,
     })
 
-    await octokit.request('PATCH /repos/{owner}/{repo}/issues/{issue_number}', {
-        owner: "ganning127",
-        repo: "asdfdas",
-        issue_number: 3,
-        state: "closed"
-    })
-
-
     // console.log(issues)
     for (var i = 0; i < issues.data.length; i++) {
         const issueNo = issues.data[i].number;
